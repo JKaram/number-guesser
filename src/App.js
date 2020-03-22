@@ -7,6 +7,7 @@ import { generateNumber, checkGuess } from "./helpers";
 
 function App() {
   const [answer, setAnswer] = useState(generateNumber());
+  const [guesses, setGuesses] = useState([]);
   const [status, setStatus] = useState("Make a guess");
 
   function newGame() {
