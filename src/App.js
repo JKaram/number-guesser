@@ -10,7 +10,7 @@ function App() {
   const [guesses, setGuesses] = useState([]);
   const [status, setStatus] = useState("Make a guess");
 
-  function newGame() {
+  const newGame = () => {
     setAnswer(generateNumber);
     setStatus("Make a guess");
   }
