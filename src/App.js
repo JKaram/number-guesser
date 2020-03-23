@@ -27,11 +27,11 @@ function App() {
       />
 
       <ul>
-        {/* {guesses.map(guess => {
+        {guesses.map(guess => {
           return (
           <li>{guess}</li>
           )
-        })} */}
+        })}
       </ul>
       <Button onClick={newGame}>New Game</Button>
       {status}

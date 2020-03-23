@@ -7,7 +7,7 @@ export default function Input({
   guesses,
   setGuesses
 }) {
-  const [value, setValue] = useState(0);
+  const [value, setValue] = useState('');
 
   const handleChange = event => {
     setValue(event.target.value);
@@ -16,7 +16,8 @@ export default function Input({
   const handleSubmit = event => {
     if (value) {
       setStatus(checkGuess(parseInt(value, 10), answer));
-      setValue(0);
+      setGuesses([...guesses, value])
+      setValue('');
     }
     event.preventDefault();
   };
