@@ -13,8 +13,7 @@ function App() {
   const newGame = () => {
     setAnswer(generateNumber);
     setGuesses([]);
-    setStatus("Make a guess");
-    
+    setStatus("Make a guess");  
   };
 
   return (
