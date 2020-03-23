@@ -1,0 +1,20 @@
+@import './styles/resets';
+@import './styles/variables';
+
+body {
+  @include centerer(600px);
+ 
+
+  background-color: $third-color;
+  color: $secondary-color;
+}
+
+h1 {
+  color: $text-color;
+  font-weight: bold;
+  font-size: 2rem;
+
+  span {
+    color: $primary-color;
+  }
+}

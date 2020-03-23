@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import '../styles/input.scss'
 
 export default function Input({
   checkGuess,
@@ -24,13 +25,13 @@ export default function Input({
 
   return (
     <form onSubmit={handleSubmit}>
-      {typeof value}
       <input
         type="number"
         placeholder="Guess Number"
         value={value}
         onChange={handleChange}
       />
+      <button type="submit">Guess</button>
     </form>
   );
 }

@@ -1,0 +1,12 @@
+$primary-color: #17252a;
+$secondary-color: #2b7a78;
+$third-color: #3aafa9;
+$fourth-color: #def2f1;
+$text-color: #feffff;
+
+
+@mixin centerer($max-width) {
+    margin: 0 auto;
+    max-width: $max-width;
+    width: 100%;
+  }
