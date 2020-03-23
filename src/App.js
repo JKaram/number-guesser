@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import "./App.css";
 
 import Input from "./components/input";
@@ -18,7 +18,21 @@ function App() {
   return (
     <div>
       {answer}
-      <Input checkGuess={checkGuess} setStatus={setStatus} answer={answer} />
+      <Input
+        checkGuess={checkGuess}
+        setStatus={setStatus}
+        answer={answer}
+        guesses={guesses}
+        setGuesses={setGuesses}
+      />
+
+      <ul>
+        {/* {guesses.map(guess => {
+          return (
+          <li>{guess}</li>
+          )
+        })} */}
+      </ul>
       <Button onClick={newGame}>New Game</Button>
       {status}
     </div>
