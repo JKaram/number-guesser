@@ -4,7 +4,7 @@ const generateNumber = () => {
 };
 
 const checkGuess = (guess, answer) => {
-  return guess === answer ? "Winner" : guess > answer ? "Lower" : "Higher";
+  return guess === answer ? "Winner!" : guess > answer ? "Lower" : "Higher";
 };
 
 export { generateNumber, checkGuess };
