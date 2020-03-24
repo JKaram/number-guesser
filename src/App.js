@@ -3,6 +3,9 @@ import "./App.scss";
 
 import Input from "./components/input";
 import Button from "./components/button";
+import Status from "./components/status";
+import Guess from "./components/guess";
+
 import { generateNumber, checkGuess } from "./helpers";
 
 function App() {
@@ -13,12 +16,14 @@ function App() {
   const newGame = () => {
     setAnswer(generateNumber);
     setGuesses([]);
-    setStatus("Make a guess");  
+    setStatus("Make a guess");
   };
 
   return (
     <body>
-      <h1>Guess The <span>Number</span></h1>
+      <h1>
+        Guess<span> The Number</span>
+      </h1>
       <Input
         checkGuess={checkGuess}
         setStatus={setStatus}
@@ -26,13 +31,13 @@ function App() {
         guesses={guesses}
         setGuesses={setGuesses}
       />
-      {status}
+      <Status status={status} />
       <ul>
         {guesses.map(guess => {
-          return <li>{guess}</li>;
+          return <Guess>{guess}</Guess>;
         })}
       </ul>
-      <Button onClick={newGame}>New Game</Button>
+      <Button className="newgame" onClick={newGame}>New Game</Button>
     </body>
   );
 }

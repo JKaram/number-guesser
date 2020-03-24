@@ -4,7 +4,7 @@
 body {
   @include centerer(600px);
  
-
+  font-family: arial;
   background-color: $third-color;
   color: $secondary-color;
 }
@@ -13,8 +13,29 @@ h1 {
   color: $text-color;
   font-weight: bold;
   font-size: 2rem;
+  text-align: center;
+  margin-top: 2%;
+  margin-bottom: 50px;
+
+  border: 2px solid $secondary-color;
+  padding: 15px 10px;
 
   span {
     color: $primary-color;
   }
+}
+
+
+ul {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0 20px;
+  background-color: $fourth-color;
+  flex-wrap: wrap;
+  max-width: 600px;
+  width:100%;
+}
+
+button {
+
 }
